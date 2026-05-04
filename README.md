@@ -38,6 +38,12 @@ Simulación completa de la soldadura de una valla, incluyendo todos sus componen
 | Periférico | Volteador IRBP K600 L1200 3150 |
 | Proceso | Soldadura MIG/MAG robotizada |
 
+<div align="center">
+
+[![Soldadura Valla](https://img.youtube.com/vi/7JAz_CPhBUo/maxresdefault.jpg)](https://www.youtube.com/watch?v=7JAz_CPhBUo)
+
+</div>
+
 ---
 
 ### 2 — Soldadura de Pieza Personalizada con Doble Robot
@@ -52,6 +58,12 @@ Coordinación de dos robots para soldar una pieza de geometría personalizada en
 | Reto principal | Coordinación eficiente sin tiempos de espera |
 
 **Proceso de selección del robot:** se evaluaron dos modelos (IRB 1660ID vs IRB 2600ID). Tras pruebas de alcance con la geometría real de la pieza, se optó por el IRB 2600ID al cubrir todas las zonas de soldadura sin reposicionamientos adicionales.
+
+<div align="center">
+
+[![Pieza Personalizada Doble Robot](https://img.youtube.com/vi/UKq3S805BGg/maxresdefault.jpg)](https://www.youtube.com/watch?v=UKq3S805BGg)
+
+</div>
 
 ---
 
