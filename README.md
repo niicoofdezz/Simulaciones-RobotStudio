@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🏭 Simulaciones Roboguide
+# 🏭 Simulaciones RobotStudio
 
-### *Simulaciones industriales con FANUC: pick & place, soldadura y modificación de útiles*
+### *Simulaciones industriales de soldadura robotizada con ABB*
 
-[![Roboguide](https://img.shields.io/badge/Software-ROBOGUIDE-FFD700?style=for-the-badge)](https://www.fanuc.eu/es/es/robots/accesorios-robots/roboguide)
-[![FANUC](https://img.shields.io/badge/Robot-FANUC-FFD700?style=for-the-badge&logoColor=black)](https://www.fanuc.eu/)
-[![Soldadura](https://img.shields.io/badge/Proceso-Soldadura_y_Pick%26Place-1a1a2e?style=for-the-badge)]()
+[![RobotStudio](https://img.shields.io/badge/Software-RobotStudio-FF6F00?style=for-the-badge)](https://new.abb.com/products/robotics/robotstudio)
+[![ABB](https://img.shields.io/badge/Robot-IRB2600ID-CC0000?style=for-the-badge)](https://new.abb.com/products/robotics/industrial-robots/irb-2600)
+[![Soldadura](https://img.shields.io/badge/Proceso-Soldadura_Robotizada-1a1a2e?style=for-the-badge)]()
 [![Prácticas](https://img.shields.io/badge/Contexto-Prácticas_Curriculares-0077B6?style=for-the-badge)]()
 
 > **Prácticas Curriculares** · Sector de Automatización Industrial · Ingeniería Robótica · 2025
@@ -17,9 +17,9 @@
 
 ## 🏭 ¿Qué contiene este repositorio?
 
-Simulaciones industriales desarrolladas con **FANUC ROBOGUIDE** durante las prácticas curriculares del Grado en Ingeniería Robótica, en una empresa del sector de la automatización industrial.
+Simulaciones de **soldadura robotizada industrial** desarrolladas con **ABB RobotStudio** durante las prácticas curriculares del Grado en Ingeniería Robótica, en una empresa del sector de la automatización industrial.
 
-Los proyectos abarcan dos tipos de procesos industriales — **pick & place** y **soldadura robotizada** — con robots FANUC en configuraciones reales de producción, incluyendo tracks, peanas y volteadores personalizados.
+Los proyectos replican condiciones y requerimientos reales de producción: geometrías complejas, coordinación multirobot y optimización de tiempos de ciclo.
 
 > ⚠️ Los archivos de simulación pertenecen a la empresa. Este repositorio recoge únicamente las descripciones técnicas de los proyectos realizados.
 
@@ -27,73 +27,40 @@ Los proyectos abarcan dos tipos de procesos industriales — **pick & place** y 
 
 ## 🔬 Simulaciones Realizadas
 
-### 1 — Pick & Place para Línea de Galvanizado
+### 1 — Soldadura de Valla Convencional
 
-Automatización de la carga de una plataforma de galvanizado mediante un robot montado sobre un **track central**, con movimientos de precisión en múltiples niveles.
-
-| Elemento | Detalle |
-|----------|---------|
-| Software | FANUC ROBOGUIDE |
-| Robot | R2000IC/270F sobre track lineal |
-| Herramienta | Ventosa de succión |
-| Proceso | Pick & place de piezas y soportes |
-
-**Descripción del ciclo:**
-1. El robot se desplaza al extremo derecho del track y recoge dos soportes
-2. Los coloca en el nivel más bajo de la plataforma central
-3. Se traslada al extremo opuesto y recoge la pieza a galvanizar
-4. Posiciona la pieza sobre los soportes instalados
-5. El ciclo se repite completando los 5 niveles de la estructura
-
----
-
-### 2 — Soldadura de Chasis de Columna Estructural
-
-Soldadura de una **pieza de grandes dimensiones** tanto en su cara exterior como interior, con control de colisiones y singularidades en el espacio de trabajo interior.
+Simulación completa de la soldadura de una valla, incluyendo todos sus componentes estructurales: barrotes, cuatro patas, elementos laterales, chapa central y cierre perimetral.
 
 | Elemento | Detalle |
 |----------|---------|
-| Software | FANUC ROBOGUIDE |
-| Robot | ARC MATE 120 sobre peana elevadora + track personalizado |
-| Periférico | 2 volteadores personalizados |
-| Reto principal | Evitar colisiones y singularidades en el interior de la pieza |
+| Software | ABB RobotStudio |
+| Robot | IRB 2600ID |
+| Periférico | Volteador IRBP K600 L1200 3150 |
+| Proceso | Soldadura MIG/MAG robotizada |
 
 ---
 
-### 3 — Modificación de Útil: Antorcha con Sensor de Detección
+### 2 — Soldadura de Pieza Personalizada con Doble Robot
 
-Variante del proyecto anterior en la que el cliente solicitó incorporar una **cámara con láser** en la antorcha para detectar automáticamente la ranura de soldadura.
-
-**Problema:** el reducido espacio de trabajo en el interior de la pieza hacía inviable la antorcha modificada en ciertas zonas.
-
-**Solución propuesta:** técnica de **Touch Sensing** — detección de la posición exacta de la junta usando la propia antorcha como sensor, realizando un contacto sin arco antes de iniciar el cordón. Se comunicó al cliente qué porcentaje del proceso era realizable con este método.
-
-> Este proyecto ilustra el flujo real de trabajo con un cliente: análisis de viabilidad, identificación de limitaciones y propuesta de alternativa técnica.
-
----
-
-### 4 — Soldadura de Escalera Metálica
-
-Soldadura de **26 barrotes** en los laterales de una escalera metálica, con una estrategia de trayectorias optimizada para minimizar el tiempo de ciclo.
+Coordinación de dos robots para soldar una pieza de geometría personalizada en el menor tiempo posible, minimizando los tiempos muertos de cada robot.
 
 | Elemento | Detalle |
 |----------|---------|
-| Software | FANUC ROBOGUIDE |
-| Robot | ARC MATE 120 sobre peana elevadora + track personalizado |
-| Periférico | 2 volteadores personalizados |
-| Cordones | 3 por extremo en primer/último barrote · 1 lateral + 1 superior en el resto |
+| Software | ABB RobotStudio |
+| Robots | 2 × IRB 2600ID (seleccionado por mayor alcance frente a IRB 1660ID) |
+| Objetivo | Minimizar tiempo de ciclo total |
+| Reto principal | Coordinación eficiente sin tiempos de espera |
 
-**Estrategia de optimización:** se completó primero el lateral derecho íntegro y después el izquierdo, evitando desplazamientos alternados innecesarios y reduciendo los tiempos muertos del robot.
+**Proceso de selección del robot:** se evaluaron dos modelos (IRB 1660ID vs IRB 2600ID). Tras pruebas de alcance con la geometría real de la pieza, se optó por el IRB 2600ID al cubrir todas las zonas de soldadura sin reposicionamientos adicionales.
 
 ---
 
 ## 🛠️ Tecnologías
 
-- **FANUC ROBOGUIDE** — programación offline y simulación
-- **TP (Teach Pendant programming)** — lenguaje de programación FANUC
-- Tracks lineales y peanas para ampliar el espacio de trabajo
-- Volteadores personalizados para acceso a geometrías complejas
-- Touch Sensing para detección automática de juntas de soldadura
+- **ABB RobotStudio** — programación offline y simulación
+- **RAPID** — lenguaje de programación del robot
+- Volteadores y posicionadores para acceso a geometrías complejas
+- Coordinación multirobot con sincronización de trayectorias
 
 ---
 
@@ -108,6 +75,6 @@ Soldadura de **26 barrotes** en los laterales de una escalera metálica, con una
 
 <div align="center">
 
-_Simulaciones desarrolladas sobre requerimientos reales de clientes industriales._
+_Simulaciones desarrolladas sobre requerimientos reales de producción industrial._
 
 </div>
